@@ -28,3 +28,15 @@ consultarInfo = () =>{
 }
 
 imagem.onclick = consultarInfo;
+
+//funçao para mostrar todos herois
+todasInfo = () =>{
+    fetch('endereçodaapi/herois')
+        .then(function(result){
+            return result.json();
+        })
+        .then(function(data){
+            texto.innerHTML = data;
+        })
+}
+todasInfo();
