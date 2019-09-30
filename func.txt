@@ -1,0 +1,30 @@
+    <input id="nome" type="text" disabled placeholder="nome">
+    <input id="idade" type="text" disabled placeholder="idade">    
+    <input id="universo" type="text" disabled placeholder="universo">
+    <input id="habilidades" type="text" disabled placeholder="habilidades">
+    <input id="categoria" type="text" disabled placeholder="categoria">
+
+
+
+
+let nome = document.querySelector("#nome")
+let idade = document.querySelector("#idade")
+let universo = document.querySelector("#universo")
+let habilidades = document.querySelector("#habilidades")
+let categoria = document.querySelector("#categoria")
+
+consultarInfo = () =>{
+    fetch(`api/${imagem.alt}`)
+        .then(function(result){
+            return result.json();
+        })
+        .then(function(data){
+            nome.value = data.;
+            idade.value = data.;
+            universo.value = data.;
+            habilidades.value = data.;
+            categoria.value = data.;
+                })
+}
+
+imagem.onclick = consultarInfo;
